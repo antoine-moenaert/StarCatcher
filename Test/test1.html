@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>
+    <link href="https://meyerweb.com/eric/tools/css/reset/reset.css" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        /*canvas {
+            background-color: green;
+        }*/
+    </style>
+    <script>
+        window.addEventListener("load", start);
+        function start()
+        {
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext('2d');
+            
+            
+            /*ctx.beginPath();
+            ctx.rect(100, 100, 30, 30);
+            //ctx.fill();
+            ctx.rect(200,200,100,50);
+            ctx.strokeStyle = "green";
+            ctx.rect(300,300,150,150);
+            ctx.stroke();*/
+            var imageWitch = document.getElementById("witch");
+            ctx.drawImage(imageWitch, 600, 400, 100, 100);
+            
+            var imageStar = document.getElementById("star");
+            ctx.drawImage(imageStar, 300, 300, 100, 100);
+            
+            
+        }
+    </script>
+</head>
+<body>
+    <canvas id="myCanvas" width="1300" height="650" style="border: 1px solid #d3d3d3; margin: 10px">
+        <img id="witch" src="Images/witch.png">
+        <img id ="star" src="Images/star.png">
+    </canvas>
+</body>
+</html>
